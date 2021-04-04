@@ -29,3 +29,4 @@ override.tf.json
 # проигнорирован файл с названием terraform.rc
 .terraformrc
 terraform.rc
+new line
