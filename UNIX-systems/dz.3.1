@@ -20,6 +20,11 @@ config.vm.provider "virtualbox" do |v|
 	end 
 	end
 3. Какой переменной можно задать длину журнала history, и на какой строчке manual это описывается?
+В этих параметрах можно задать длину журнала истории.
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
 
 4. Что делает директива ignoreboth в bash?
 ignoreboth это сокращение от ignorespace и ignoredups.
