@@ -56,7 +56,7 @@ curl http://$ip:80 -m 1
 if (($? !=0))
 then
 let "y+=1"
-echo "не работает" >> /var/log/log_curl_err/log
+echo "не работает" >> /var/log/log_curl_err
 else
 let "y+=1"
 echo "Работает" >> /var/log/log_curl_err
