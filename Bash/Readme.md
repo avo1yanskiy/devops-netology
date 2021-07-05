@@ -14,3 +14,15 @@ date >> curl.log
 fi
 done
 <Была пропущена скобка>
+
+
+
+
+
+
+
+    
+      CREATE USER test@localhost WITH
+      MAX_QUERIES_PER_HOUR 100
+      PASSWORD EXPIRE INTERVAL 120 DAY 
+      IDENTIFIED BY 'password';
