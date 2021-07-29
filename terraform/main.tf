@@ -19,18 +19,16 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
-resource "aws_instance" "web" {
+resource "aws_instance" "ServerWeb" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
-  availability_zone  = "us-west-2"
 
 root_block_device {
-  volume_size        = "8 GiB"
+  volume_size        = "8"
   volume_type        = "gp2"
 }
 
   tags = {
     Name = "My First Install"
    }
-  }
  }
