@@ -14,6 +14,6 @@ output "caller_user" {
 data "aws_region" "current" {}
 
 output "instance_ip_addr" {
-  value = aws_instance.server.private_ip
+  value = aws_instance.ubuntu.private_ip
 }
     
