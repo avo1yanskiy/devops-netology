@@ -13,6 +13,6 @@ output "caller_user" {
 }
 data "aws_region" "current" {}
 
-output "endpoint" {
-        value = data.aws_region_identity.current.endpoint
+output "name" {
+        value = data.aws_region_identity.current.name
 }
