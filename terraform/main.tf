@@ -27,7 +27,6 @@ resource "aws_instance" "ServerWeb" {
   }
   root_block_device {
           delete_on_termination = false
-          device_name           = "/dev/sda3"
           volume_size           = 8
           volume_type           = "gp2"
         }
