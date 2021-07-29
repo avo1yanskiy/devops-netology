@@ -29,7 +29,6 @@ root_block_device {
 }
 }
   tags = {
-
     Name = "My First Install"
-   }
- }
+  }
+ 
