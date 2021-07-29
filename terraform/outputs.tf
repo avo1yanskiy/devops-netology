@@ -22,10 +22,10 @@ output "endpoint" {
 
 output "instance_id" {
     description = "ID of the EC2 instance"
-    value       = aws_instance.web.id
+    value       = aws_instance.ServerWeb.id
 }
 
 output "instance_private_ip" {
     description = "Public IP address of the EC2 instance"
-    value       = aws_instance.web.private_ip 
+    value       = aws_instance.ServerWeb.private_ip 
 }
