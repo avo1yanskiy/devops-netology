@@ -11,4 +11,4 @@ output "caller_arn" {
 output "caller_user" {
   value = data.aws_caller_identity.current.user_id
 }
-output "aws_region" "current" {}
+data "aws_region" "us-west-2" {}
