@@ -20,6 +20,6 @@ output "endpoint" {
         value = data.aws_region.current.endpoint
 }
 
-output "public_ip" {
+output "instance_public_ip" {
   description = "List of public IP addresses assigned to the instances, if applicable"
   value       = aws_instance.ubuntu.public_ip
