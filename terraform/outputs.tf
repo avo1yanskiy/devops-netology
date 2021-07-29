@@ -20,7 +20,12 @@ output "endpoint" {
         value = data.aws_region.current.endpoint
 }
 
+output "instance_id" {
+  description = "ID of the EC2 instance"
+  value       = aws_instance.ServerWeb.id
+}
+
 output "instance_public_ip" {
-  description = "List of public IP addresses assigned to the instances, if applicable"
+  description = "Public IP address of the EC2 instance"
   value       = aws_instance.ServerWeb.public_ip
 }
