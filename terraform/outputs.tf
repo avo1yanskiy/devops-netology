@@ -33,3 +33,7 @@ output "instance_subnet_id" {
     description = "subnet_id"
     value       = aws_instance.ServerWeb.subnet_id
 
+output "subnet_cidr_blocks" {
+  value = [for s in data.aws_subnet.ServerWeb : s.cidr_block]
+}
+
