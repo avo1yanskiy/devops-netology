@@ -26,8 +26,7 @@ resource "aws_instance" "ServerWeb" {
     Name = "My First Install AWS"
   }
   root_block_device {
-          delete_on_termination = False
-          device_name           = Privet
+          delete_on_termination = false
           volume_size           = 8
           volume_type           = "gp2"
         }
