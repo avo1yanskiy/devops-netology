@@ -27,10 +27,12 @@ resource "aws_instance" "ServerWeb" {
   }
   root_block_device {
           delete_on_termination = false
-          tags                  = ssd
           volume_size           = 8
           volume_type           = "gp2"
         }
-
+timeouts {
+    create = "10m"
+    delete = "20m"
+}
 }
  
