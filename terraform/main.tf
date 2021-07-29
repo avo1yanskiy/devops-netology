@@ -28,3 +28,7 @@ resource "aws_instance" "web" {
     Name = "My First Install"
   }
 }
+root_block_device {
+  volume_size        = "8 GiB"
+  volume_type        = "gp2"
+}
