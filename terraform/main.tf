@@ -26,7 +26,7 @@ resource "aws_instance" "ServerWeb" {
 root_block_device {
   volume_size        = "8"
   volume_type        = "gp2"
-  device_name        = "stoget2ubuntu"
+  tags               = "ubuntu"
   }
   tags = {
     Name = "My First Install AWS"
