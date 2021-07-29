@@ -30,8 +30,6 @@ output "instance_public_ip" {
     value       = aws_instance.ServerWeb.public_ip
 }
 
-data "aws_subnet" "ServerWeb" {}
-
-output "subnet_cidr_blocks" {
-  value = data.aws_subnet.ServerWeb : s.cidr_block
-}
+output "instance_subnet_id" {
+    description = "subnet_id"
+    value       = aws_instance.ServerWeb.subnet_id
