@@ -22,14 +22,15 @@ data "aws_ami" "ubuntu" {
 resource "aws_instance" "ServerWeb" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
-
-root_block_device {
-  volume_size        = "8"
-  volume_type        = "gp2"
-  device_name         = Privet
-  }
   tags = {
     Name = "My First Install AWS"
   }
+  root_block_device {
+          delete_on_termination = False
+          device_name           = Privet
+          volume_size           = 8
+          volume_type           = "gp2"
+        }
+
 }
  
