@@ -29,7 +29,3 @@ output "instance_public_ip" {
     description = "Public IP address of the EC2 instance"
     value       = aws_instance.ServerWeb.public_ip
 }
-
-output "instance_subnet_id" {
-    description = "subnet_id"
-    value       = aws_instance.ServerWeb.subnet_id
