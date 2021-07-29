@@ -24,11 +24,13 @@ resource "aws_instance" "web" {
   instance_type = "t2.micro"
   availability_zone  = "us-west-2"
 
-  tags = {
-    Name = "My First Install"
-  }
-}
 root_block_device {
   volume_size        = "8 GiB"
   volume_type        = "gp2"
 }
+
+  tags = {
+    Name = "My First Install"
+   }
+  }
+ }
