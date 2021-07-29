@@ -27,11 +27,7 @@ root_block_device {
   volume_size        = "8"
   volume_type        = "gp2"
 }
-
-data "aws_region" "current" {
-    name = "us-west-2"
 }
-
   tags = {
 
     Name = "My First Install"
