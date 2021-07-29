@@ -19,3 +19,7 @@ output "name" {
 output "endpoint" {
         value = data.aws_region.current.endpoint
 }
+
+output "instance_ip_addr" {
+  value = aws_instance.server.private_ip
+}
