@@ -25,9 +25,9 @@ output "instance_id" {
     value       = aws_instance.ServerWeb.id
 }
 
-output "instance_private_ip" {
+output "instance_public_ip" {
     description = "Public IP address of the EC2 instance"
-    value       = aws_instance.ServerWeb.private_ip 
+    value       = aws_instance.ServerWeb.public_ip
 }
 output "instance_subnet_id" {
     description = "subnet_id"
