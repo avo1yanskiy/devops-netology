@@ -27,7 +27,7 @@ resource "aws_instance" "ServerWeb" {
   }
   root_block_device {
           delete_on_termination = false
-          device_name           = delete_on_termination
+          device_name           = "delete_on_termination"
           volume_size           = 8
           volume_type           = "gp2"
         }
