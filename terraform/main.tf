@@ -23,9 +23,6 @@ resource "aws_instance" "WebServer" {
   ami                = data.aws_ami.ubuntu.id
   instance_type      = "t2.micro"
   availability_zone  = "us-west-2"
-  volume_size        = "8 GiB"
-  volume_type        = "gp2"
-
   tags = {
     Name = "My First Install"
   }
