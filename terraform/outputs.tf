@@ -20,12 +20,12 @@ output "endpoint" {
         value = data.aws_region.current.endpoint
 }
 
-#output "instance_id" {
-#  description = "ID of the EC2 instance"
-#  value       = aws_instance.web.id
-#}
+output "instance_id" {
+    description = "ID of the EC2 instance"
+    value       = aws_instance.web.id
+}
 
 output "instance_private_ip" {
-  description = "Public IP address of the EC2 instance"
-  value       = aws_instance.web.private_ip 
+    description = "Public IP address of the EC2 instance"
+    value       = aws_instance.web.private_ip 
 }
