@@ -28,6 +28,14 @@ resource "aws_s3_bucket" "bucket" {
     Environment = "test"
   }
 }
+
+terraform {
+  backend "s3" {
+    bucket = "mybucket-7-3"
+    key    = "mybucket-7-3/terraform/project-1"
+    region = "us-west-2"
+  }
+}
 resource "aws_instance" "ServerWeb" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
