@@ -15,6 +15,18 @@ data "aws_ami" "ubuntu" {
     name   = "virtualization-type"
     values = ["hvm"]
   }
+  
+  filter {
+    name   = "architecture"
+    values = ["x86_64"]
+
+  filter {
+    name   = "public"
+    values = ["true"]
+  
+  filter {
+    name   = "image_owner_alias"
+    values = ["amazon"]
 
   owners = ["099720109477"] # Canonical
 }
