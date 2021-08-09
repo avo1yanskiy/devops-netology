@@ -28,7 +28,7 @@ resource "aws_instance" "ServerWeb" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
   tags = {
-    Name = "My First Install AWS"
+    Name = "Deploy VM"
   }
   root_block_device {
           delete_on_termination = false
@@ -37,3 +37,10 @@ resource "aws_instance" "ServerWeb" {
         }
 }
  
+terraform {
+  backend "s3" {
+    bucket = "mybucket"
+    key    = "path/to/my/key"
+    region = "us-west-2"
+  }
+}
