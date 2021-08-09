@@ -14,6 +14,7 @@ provider "aws" {
 # Дадим глобально-уникальное имя корзине (bucket). Имя должно быть уникальным на весь интернет
 resource "aws_s3_bucket" "terraform_state" {
     bucket = "terraform-state"
+    acl    = "private"
 
     # Защита от случайного удаления S3 bucket
     # Даже командой terraform destroy невозможно будет удалить эту корзину
