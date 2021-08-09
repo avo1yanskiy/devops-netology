@@ -22,13 +22,27 @@ data "aws_ami" "ubuntu" {
 terraform {
       backend "s3" {
       bucket = "tfstate-state-terraform"
-      key    = "tfstate-state-terraform/init-1"
+      key    = "tfstate-state-terraform/terraform-7.3"
       region = "us-west-2"
+  }
+}
+
+locals {
+  web_instance_type_map = {
+    stage = "t2.micro" 
+    prod  = "t2.micro"
+  }
+}
+locals {
+  web_instance_count_map = {
+    stage = "1" 
+    prod  = "2"
   }
 }
 resource "aws_instance" "ServerWeb" {
   ami           = data.aws_ami.ubuntu.id
-  instance_type = "t2.micro"
+  instance_type = locals.web_instance_type_map[terraform.workspace]
+  count = locals.web_instance_count_map[terraform.workspace]
   tags = {
     Name = "Deploy VM"
   }
