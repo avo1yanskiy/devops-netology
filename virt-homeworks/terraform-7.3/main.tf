@@ -29,26 +29,26 @@ terraform {
 */
 
 locals {
-  www_instance_type_map = {
+  web_instance_type_map = {
     stage = "t2.micro" 
     prod  = "t2.micro"
   }
 }
 locals {
-  www_instance_count_map = {
+  web_instance_count_map = {
     stage = "1" 
     prod  = "2"
   }
 }
-resource "aws_instance" "www" {
+resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
-  instance_type = locals.www_instance_type_map[terraform.workspace]
-  count = locals.www_instance_count_map[terraform.workspace]
+  instance_type = locals.web_instance_type_map[terraform.workspace]
+  count = locals.web_instance_count_map[terraform.workspace]
   tags = {
     Name = "Deploy VM"
   }
   root_block_device {
-          delete_on_termination = false
+          delete_on_termination = true
           volume_size           = 8
           volume_type           = "gp2"
         }
