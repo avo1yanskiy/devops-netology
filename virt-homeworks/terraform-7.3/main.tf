@@ -43,7 +43,7 @@ locals {
 resource "aws_instance" "www" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = locals.www_instance_type_map[terraform.workspace]
-  count = 1 locals.www_instance_count_map[terraform.workspace]
+  count = locals.www_instance_count_map[terraform.workspace]
   tags = {
     Name = "Deploy VM"
   }
