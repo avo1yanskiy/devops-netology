@@ -18,7 +18,7 @@ data "aws_ami" "ubuntu" {
 
   owners = ["099720109477"] # Canonical
 }
-
+/*
 terraform {
       backend "s3" {
       bucket = "tfstate-state-terraform"
@@ -26,6 +26,7 @@ terraform {
       region = "us-west-2"
   }
 }
+*/
 
 locals {
   web_instance_type_map = {
