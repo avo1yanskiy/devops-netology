@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = "tfstate"
+  bucket = "tfstate-state-terraform"
 
   versioning {
     enabled = true
