@@ -21,8 +21,8 @@ data "aws_ami" "ubuntu" {
 
 terraform {
       backend "s3" {
-      bucket = "mybucket-7-3"
-      key    = "mybucket-7-3/terraform/project-1"
+      bucket = "tfstate-state-terraform"
+      key    = "tfstate-state-terraform/init-1"
       region = "us-west-2"
   }
 }
