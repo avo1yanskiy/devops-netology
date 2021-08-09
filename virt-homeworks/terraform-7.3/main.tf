@@ -19,23 +19,6 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
-resource "aws_s3_bucket" "bucket" {
-  bucket = "my-tf-test-bucket"
-  acl    = "private"
-
-  tags = {
-    Name        = "bucket-test-7-3"
-    Environment = "test"
-  }
-}
-
-terraform {
-  backend "s3" {
-    bucket = "mybucket-7-3"
-    key    = "mybucket-7-3/terraform/project-1"
-    region = "us-west-2"
-  }
-}
 resource "aws_instance" "ServerWeb" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
@@ -47,4 +30,11 @@ resource "aws_instance" "ServerWeb" {
           volume_size           = 8
           volume_type           = "gp2"
         }
+        terraform {
+      backend "s3" {
+      bucket = "mybucket-7-3"
+      key    = "mybucket-7-3/terraform/project-1"
+      region = "us-west-2"
+  }
+}
 }
