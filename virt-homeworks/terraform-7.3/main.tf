@@ -29,21 +29,21 @@ terraform {
 */
 
 locals {
-  web_instance_type_map = {
+  www_instance_type_map = {
     stage = "t2.micro" 
     prod  = "t2.micro"
   }
 }
 locals {
-  web_instance_count_map = {
+  www_instance_count_map = {
     stage = "1" 
     prod  = "2"
   }
 }
-resource "aws_instance" "ServerWeb" {
+resource "aws_instance" "www" {
   ami           = data.aws_ami.ubuntu.id
-  instance_type = locals.web_instance_type_map[terraform.workspace]
-  count = locals.web_instance_count_map[terraform.workspace]
+  instance_type = locals.www_instance_type_map[terraform.workspace]
+  count = 1 locals.www_instance_count_map[terraform.workspace]
   tags = {
     Name = "Deploy VM"
   }
