@@ -36,11 +36,3 @@ resource "aws_instance" "ServerWeb" {
           volume_type           = "gp2"
         }
 }
- 
-terraform {
-  backend "s3" {
-    bucket = "mybucket"
-    key    = "path/to/my/key"
-    region = "us-west-2"
-  }
-}
