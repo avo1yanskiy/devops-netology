@@ -31,13 +31,19 @@ terraform {
 locals {
   google_instance_type_map = {
     stage = "t2.micro" 
-    prod  = "t2.micro"
+    prod  = "t3.large"
   }
 }
 locals {
   google_instance_count_map = {
     stage = "1" 
     prod  = "2"
+  }
+}
+locals {
+  instances = {
+    "t2.micro" = data.aws_ami.ubuntu.id
+    "t3.large" = data.aws_ami.ubuntu.id
   }
 }
 resource "aws_instance" "google" {
@@ -52,5 +58,17 @@ resource "aws_instance" "google" {
           volume_size           = 8
           volume_type           = "gp2"
         }
+        
+}
+lifecycle{
+  create_before_destroy = true
+  ignore_changes = ["tags"]
+}
+
+resource "aws_instance" "serverweb" {
+  for_each = local.instances
+
+  ami = each.value
+  instance_type = each.key
         
 }
