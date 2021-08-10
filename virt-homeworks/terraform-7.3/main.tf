@@ -18,7 +18,6 @@ data "aws_ami" "ubuntu" {
 
   owners = ["099720109477"] # Canonical
 }
-/*
 terraform {
       backend "s3" {
       bucket = "tfstate-state-terraform"
@@ -26,7 +25,6 @@ terraform {
       region = "us-west-2"
   }
 }
-*/
 
 locals {
   google_instance_type_map = {
@@ -70,7 +68,7 @@ resource "aws_instance" "serverweb" {
   lifecycle {
     create_before_destroy = true
     ignore_changes = [
-      
+
       tags,
       ]
   }
