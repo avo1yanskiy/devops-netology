@@ -58,11 +58,7 @@ resource "aws_instance" "google" {
           volume_size           = 8
           volume_type           = "gp2"
         }
-        
-}
-lifecycle{
-  create_before_destroy = true
-  ignore_changes = ["tags"]
+      
 }
 
 resource "aws_instance" "serverweb" {
@@ -70,5 +66,10 @@ resource "aws_instance" "serverweb" {
 
   ami = each.value
   instance_type = each.key
+
+  lifecycle {
+    create_before_destroy = true
+    ignore_changes = ["tags"]
+  }
         
 }
