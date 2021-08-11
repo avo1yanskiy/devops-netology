@@ -43,4 +43,3 @@ resource "aws_instance" "ServerWeb" {
           volume_type           = "gp2"
         }
 }
- 
