@@ -1,2 +1,3 @@
-# devops-netology
-devops-netology
+* DevOps-Netology *
+
+Учеба по курсе DevOps
