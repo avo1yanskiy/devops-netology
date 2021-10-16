@@ -2,9 +2,10 @@ version: 3
 automerge: true
 delete_source_branch_on_merge: true
 projects:
-- name: my-project-name
-  dir: .
-  workspace: default
+  dir: my-project-name-1
+  workspace: stage
+  dir: my-project-name-1
+  workspace: prod
   terraform_version: v0.11.0
   delete_source_branch_on_merge: true
   autoplan:
