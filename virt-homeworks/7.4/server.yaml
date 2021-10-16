@@ -4,7 +4,7 @@ repos:
   # If using a regex, it must start and end with a slash.
   # Repo ID's are of the form {VCS hostname}/{org}/{repo name}, ex.
   # github.com/runatlantis/atlantis.
-- id: github.com/avo1yanskiy/devops-netology
+- id: github.com/avo1yanskiy/.*
   # branch is an regex matching pull requests by base branch
   # (the branch the pull request is getting merged into).
   # By default, all branches are matched
@@ -48,7 +48,7 @@ workflows:
       steps:
       - init
       - plan:
-          extra_args: ["-lock", "false"]
+          extra_args: ["-lock", "false"] ### don`t lock 
     apply:
       steps:
       - run: echo Hello!
