@@ -1,0 +1,19 @@
+---
+all:
+  hosts:
+    server-01:
+      ansible_host: 51.250.21.212
+    #server-02:
+    #  ansible_host: 178.154.255.6
+prod:
+  hosts:
+    server-01:
+      ansible_host: 51.250.21.212
+    #server-02:
+    #  ansible_host: 178.154.255.6
+test:
+  hosts:
+    server-01:
+      ansible_host: 51.250.21.212
+    #server-02:
+    #  ansible_host: 178.154.255.6
