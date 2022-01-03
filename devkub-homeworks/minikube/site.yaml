@@ -24,6 +24,7 @@
       owner: root
       group: root
       mode: '777'
+      remote_src: yes
   - name: Install
     become: yes
     apt:
@@ -45,6 +46,8 @@
       owner: root
       group: root
       mode: '777'
+      remote_src: yes
+
   
 
   
