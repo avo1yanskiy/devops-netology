@@ -15,7 +15,9 @@
     become: yes
     ansible.builtin.file:
       dest=./kubectl
-      mode=a+x
+      owner: root
+      group: root
+      mode='777'
   - name: Copy file with owner and permissions
     become: yes
     ansible.builtin.copy:
@@ -34,7 +36,9 @@
     become: yes
     ansible.builtin.file:
       dest=./minikube
-      mode=a+x
+      owner: root
+      group: root
+      mode='777'
   - name: Copy file with owner and permissions
     become: yes
     ansible.builtin.copy:
