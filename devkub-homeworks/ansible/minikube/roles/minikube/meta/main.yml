@@ -1,8 +1,8 @@
 galaxy_info:
   author: Aleksandr Volyanskiy
-  description: Install Apache & Files drop
+  description: minikube
   company: netology
-  role_name: Apache
+  role_name: minikube
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
