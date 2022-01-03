@@ -10,3 +10,7 @@
       cache_valid_time: 3600 
   - name: Download minikube
     ansible.builtin.shell: curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+  - name: Changing perm of "kubectl", adding "+x"
+    file:
+      dest=./kubectl
+      mode=a+x
