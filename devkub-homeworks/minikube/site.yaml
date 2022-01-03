@@ -47,6 +47,17 @@
       owner: root
       group: root
       mode: '777'
+  - name: Start minikube
+    ansible.builtin.shell: minikube start --vm-driver=none
+  - name: Start ingress
+    become: yes
+    ansible.builtin.shell: minikube addons enable ingress
+  - name: Start minikube
+    become: yes
+    ansible.builtin.shell: kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.4.0/aio/deploy/recommended.yaml
+    
+
+    
   
 
   
