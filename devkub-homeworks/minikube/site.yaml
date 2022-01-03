@@ -29,12 +29,12 @@
   - name: Changing perm of "minikube", adding "+x"
     become: yes
     ansible.builtin.file:
-      dest= minikube
+      dest=./minikube
       mode=a+x
   - name: Copy file with owner and permissions
     become: yes
     ansible.builtin.copy:
-      src: minikube
+      src: ./minikube
       dest: /usr/local/bin/
   
 
