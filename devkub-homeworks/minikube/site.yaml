@@ -24,7 +24,6 @@
       owner: root
       group: root
       mode: '777'
-      remote_src: yes
   - name: Install
     become: yes
     apt:
@@ -39,15 +38,13 @@
       src: ./minikube
       dest: /usr/local/bin/
       remote_src: yes
-    - name: Changing perm of "minikube", adding "+x"
+  - name: Changing perm of "minikube", adding "+x"
     become: yes
     ansible.builtin.file:
       dest: /usr/local/bin/minikube
       owner: root
       group: root
       mode: '777'
-      remote_src: yes
-
   
 
   
