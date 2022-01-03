@@ -6,6 +6,5 @@
   apt: 
     update_cache: yes
     force_apt_get: yes
-    cache_valid_time: 3600
   - name: 
     ansible.builtin.shell: curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
