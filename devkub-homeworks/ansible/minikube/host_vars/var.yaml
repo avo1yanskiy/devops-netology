@@ -1,6 +1,3 @@
-file dymotd: dymotd
-
-vars:
-  ansible_connection: ssh
-  ansible_ssh_user: parallels
-  ansible_ssh_private_key_file: ~/.ssh/id_rsa.pub
+    ansible_connection: ssh
+    ansible_ssh_user: parallels
+    ansible_ssh_private_key_file: ~/.ssh/id_rsa.pub
