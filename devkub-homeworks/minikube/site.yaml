@@ -21,6 +21,7 @@
     ansible.builtin.copy:
       src: ./kubectl
       dest: /usr/local/bin/kubectl
+      remote_src: yes
   - name: Install
     become: yes
     apt:
@@ -39,6 +40,7 @@
     ansible.builtin.copy:
       src: ./minikube
       dest: /usr/local/bin/
+      remote_src: yes
   
 
   
