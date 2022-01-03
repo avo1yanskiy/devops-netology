@@ -11,19 +11,19 @@
   - name: Download kubectl
     become: yes
     ansible.builtin.shell: curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
-  - name: Changing perm of "kubectl", adding "+x"
-    become: yes
-    ansible.builtin.file:
-      path: ./kubectl
-      owner: root
-      group: root
-      mode: '777'
   - name: Copy file with owner and permissions
     become: yes
     ansible.builtin.copy:
       src: ./kubectl
       dest: /usr/local/bin/kubectl
       remote_src: yes
+  - name: Changing perm of "kubectl", adding "+x"
+    become: yes
+    ansible.builtin.file:
+      path: /usr/local/bin/kubectl
+      owner: root
+      group: root
+      mode: '777'
   - name: Install
     become: yes
     apt:
@@ -32,19 +32,19 @@
   - name: Download minikube
     become: yes
     ansible.builtin.shell: curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-  - name: Changing perm of "minikube", adding "+x"
-    become: yes
-    ansible.builtin.file:
-      dest: ./minikube
-      owner: root
-      group: root
-      mode: '777'
   - name: Copy file with owner and permissions
     become: yes
     ansible.builtin.copy:
       src: ./minikube
       dest: /usr/local/bin/
       remote_src: yes
+    - name: Changing perm of "minikube", adding "+x"
+    become: yes
+    ansible.builtin.file:
+      dest: /usr/local/bin/minikube
+      owner: root
+      group: root
+      mode: '777'
   
 
   
