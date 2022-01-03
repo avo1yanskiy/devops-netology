@@ -1,5 +1,5 @@
 ---
-- name: Install Apache
+- name: Install minikube
   hosts: prod
   roles:
-    - apache
+    - minikube
