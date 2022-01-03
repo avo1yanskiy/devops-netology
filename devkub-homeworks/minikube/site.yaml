@@ -14,10 +14,10 @@
   - name: Changing perm of "kubectl", adding "+x"
     become: yes
     ansible.builtin.file:
-      dest=./kubectl
+      path: ./kubectl
       owner: root
       group: root
-      mode='777'
+      mode: '777'
   - name: Copy file with owner and permissions
     become: yes
     ansible.builtin.copy:
@@ -35,10 +35,10 @@
   - name: Changing perm of "minikube", adding "+x"
     become: yes
     ansible.builtin.file:
-      dest=./minikube
+      dest: ./minikube
       owner: root
       group: root
-      mode='777'
+      mode: '777'
   - name: Copy file with owner and permissions
     become: yes
     ansible.builtin.copy:
