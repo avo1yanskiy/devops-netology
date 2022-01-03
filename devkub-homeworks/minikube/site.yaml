@@ -25,7 +25,7 @@
   - name: Install
     become: yes
     apt:
-      name: docker.io conntrack
+      name: docker.io
       state: present
   - name: Download minikube
     become: yes
