@@ -1,6 +1,6 @@
 ---
 # tasks file for minikube
-- name: Update apt-get repo and cache
+  - name: Update apt-get repo and cache
     become: yes
     apt: 
       upgrade: yes
