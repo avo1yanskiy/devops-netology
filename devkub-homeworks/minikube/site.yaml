@@ -48,6 +48,7 @@
       group: root
       mode: '777'
   - name: Start minikube
+    become: yes
     ansible.builtin.shell: minikube start --vm-driver=none
   - name: Start ingress
     become: yes
