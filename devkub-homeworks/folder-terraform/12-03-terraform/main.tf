@@ -17,7 +17,7 @@ provider "yandex" {
 
 #<настройки провайдера>
 
-resource "yandex_compute_instance" "VM-1" {
+resource "yandex_compute_instance" "vm-1" {
   name = "master"
 
   resources {
@@ -37,11 +37,11 @@ resource "yandex_compute_instance" "VM-1" {
   }
 
   metadata = {
-    ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
+    user-data = "${file("./meta.txt")}"
   }
 }
 
-resource "yandex_compute_instance" "VM-2" {
+resource "yandex_compute_instance" "vm-2" {
   name = "worker"
 
   resources {
