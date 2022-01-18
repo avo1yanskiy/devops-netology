@@ -5,7 +5,7 @@ users:
     shell: /bin/bash
     sudo: ['ALL=(ALL) NOPASSWD:ALL']
     ssh-authorized-keys:
-      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC5gEGXQhi+3jjRrrdQXpLZv9FZx8j/lsuFkJ56dKR5p6fMqi6yi4FcI4bZI3YUO338KJn3wIm6xAfPr9UPEdLxNweWfWKJg4uAI1zuW7z4O8F95mltSQbjKFcLAN89Z6fBqxlmfy40kN/8mGi5jQr/y4AEtLoRlmwzQ5xLsda3Thi/gY3i364AUbTwd1/FA9ChrT7fJB5wJK0RNpkMXwjKlBDIo3y7ONTE1Updh2ucWRz83oEU2VOBaniMTforTEjJDeCDF01JmeV/icY+qyw2mP6pRbedqaR9jvECEZnIubz0jBShccbw/U6bFRxZidYn2bYpJSSddMYczOZn0+l/34uqpgRw1wRiG3/qwGoKrEeq8SWK8CvfgVqBMey8mFfmj3xei9CPUoC9UHEmG6tPeIBALIXQ6dfsyJs5uWJMc4Q96Xg7sA2Ez35THmO65jS5fSDuUAhbxOdHipFgQUS0N31+5NfUB53dCM69tYjxyV9S4kDGGmgSfiTwc1/BJ/M= parallels@VM
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC3FMGBULziuiBEIHxwIt/UmRsGtGHaYoW09xaQmE8Urwq2EfnsG7aNJkxKNXH5sO7qo7sKY76x2Uqtphcivil5fdAkcaJe2lF+GeAEZAKrTiL11Pbr3X18vvCWl786AaMPHvnTMS5QtkeG0K21wMkrYVQrXZKBoRhcq4CmcGl9475/mP2xCjaCGlc7v4vhbC/HgZarLVDt7rjsBO3wLe5OwKwM/KxEZiiJJ9ewdsZSpwFfwCFnKdOsTsYoIDMkEXpITKqhlzcUpglICvFvxpNObcYlil5N7j+cOrhwlaBRZ39OBbcZD0Qe/EywdHH/P7Pjk4hYLdutlZVnMc4zaiFeGQ0dam+2qkU0Ku72sN/CHsWfwYoCYSVcWVm+eOxJ4mHzT6kYhl/xSmxOK8GVvz4l6IvtXCYiyhkOd+U0b3YAfXBKUs3PD/xR2ejtsAYdithUQdFqaRVnum7NSH3jkcmMJ5vicZb4egZfQrnu47CHCMVxEyFlbu8iKP/h59opqws= admin@fhmkp5k89pctmg56cvur
 
 
 #      - ssh-rsa AAAAB3Nza......OjbSMRX user@example.com
